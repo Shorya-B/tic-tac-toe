@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ccmhy3pk7lwbv"]
+
+[ext_resource type="Script" uid="uid://cm3qmg4cm43n0" path="res://Scripts/win_line.gd" id="1_hvfel"]
+
+[node name="WinLine" type="Line2D" unique_id=1918619088]
+script = ExtResource("1_hvfel")

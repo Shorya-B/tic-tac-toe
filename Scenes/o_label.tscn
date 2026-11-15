@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c0623n3t8a5dw"]
+
+[node name="OLabel" type="Label" unique_id=552059596]
+z_index = 5
+offset_right = 200.0
+offset_bottom = 254.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 186
+text = "O"
+horizontal_alignment = 1
+vertical_alignment = 1

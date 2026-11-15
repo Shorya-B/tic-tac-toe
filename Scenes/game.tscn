@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dr7bah6mwvajq"]
+
+[ext_resource type="PackedScene" uid="uid://c0kw5c1li4i3t" path="res://Scenes/background.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://cybdlsa0wri08" path="res://Scripts/game.gd" id="1_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://c0623n3t8a5dw" path="res://Scenes/o_label.tscn" id="2_3dryh"]
+[ext_resource type="PackedScene" uid="uid://ejo2x3lfidje" path="res://Scenes/x_label.tscn" id="3_wowpa"]
+[ext_resource type="PackedScene" uid="uid://ccmhy3pk7lwbv" path="res://Scenes/win_line.tscn" id="4_wowpa"]
+
+[node name="Game" type="Node2D" unique_id=995655573]
+script = ExtResource("1_qxrlw")
+oLabelScene = ExtResource("2_3dryh")
+xLabelScene = ExtResource("3_wowpa")
+winLineScene = ExtResource("4_wowpa")
+
+[node name="Background" parent="." unique_id=1492675839 instance=ExtResource("1_ebmjs")]

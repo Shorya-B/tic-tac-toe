@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c0kw5c1li4i3t"]
+
+[node name="Background" type="Node2D" unique_id=1492675839]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=559335573]
+offset_right = 600.0
+offset_bottom = 600.0
+color = Color(1, 0.84313726, 0.19215687, 1)
+
+[node name="Lines" type="Node" parent="." unique_id=1364091936]
+
+[node name="Line2D" type="Line2D" parent="Lines" unique_id=36383887]
+points = PackedVector2Array(200, 0, 200, 600)
+
+[node name="Line2D2" type="Line2D" parent="Lines" unique_id=10703316]
+points = PackedVector2Array(400, 0, 400, 600)
+
+[node name="Line2D3" type="Line2D" parent="Lines" unique_id=434755841]
+points = PackedVector2Array(0, 200, 600, 200)
+
+[node name="Line2D4" type="Line2D" parent="Lines" unique_id=357275851]
+points = PackedVector2Array(0, 400, 600, 400)
