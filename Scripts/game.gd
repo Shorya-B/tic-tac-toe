@@ -59,6 +59,7 @@ func showLabel(mousePosition):
 
 
 func checkWin():
+	# Checks Horizontal Win:
 	var checker := 2
 	for i in range(matrixList.size()):
 		if null not in matrixList[i]:
@@ -66,29 +67,55 @@ func checkWin():
 				if !j :
 					checker = matrixList[i][j]
 					continue
-				if checker != matrixList[i][j]:
+				elif checker != matrixList[i][j]:
 					break
-				if j == (matrixList[i].size() - 1):
-					drawWinLine()
+				elif j == (matrixList[i].size() - 1):
+					drawWinLine(Vector2(0,i*widthOfBlock + widthOfBlock/2.0),Vector2(widthOfBlock*matrixList.size(), i*widthOfBlock + widthOfBlock/2.0))
 					break
+					
+	# Checks Vertical Win:
 	checker = 2
 	for i in range(matrixList[0].size()):
 		for j in range(matrixList.size()):
 			if !j and matrixList[j][i] != null:
 				checker = matrixList[j][i]
 				continue
-			if checker != matrixList[j][i]:
+			elif checker != matrixList[j][i]:
 				break
-			if j == (matrixList.size() - 1):
-				drawWinLine()
+			elif j == (matrixList.size() - 1):
+				drawWinLine(Vector2(i*widthOfBlock + widthOfBlock/2.0,0),Vector2(i*widthOfBlock + widthOfBlock/2.0, widthOfBlock*matrixList.size(),))
 				break
+
+	# Checks Main Diagonal Win:
+	checker = 2
+	for i in range(matrixList.size()):
+		if !i and matrixList[i][i] != null:
+			checker = matrixList[i][i]
+			continue
+		elif checker != matrixList[i][i]:
+			break
+		elif i == (matrixList.size() - 1):
+				drawWinLine(Vector2(0,0),Vector2(widthOfBlock*matrixList.size(), widthOfBlock*matrixList.size()))
+				break
+	# Checks AntiDiagonal Win:
+	checker = 2
+	for i in range(matrixList.size()):
+		if !i and  matrixList[i][matrixList.size()-1-i] != null:
+			checker = matrixList[i][matrixList.size()-1-i]
+			continue
+		elif checker != matrixList[i][matrixList.size()-1-i]:
+			break
+		elif i == (matrixList.size() - 1):
+				drawWinLine(Vector2(widthOfBlock*matrixList.size(), 0),Vector2(0, widthOfBlock*matrixList.size()))
+				break
+	
 		
 		
-func drawWinLine():
+func drawWinLine(startPoint, endPoint):
 	print("Win Line to be drawn!")
 	var winLine = winLineScene.instantiate()
 	add_child(winLine)
-	winLine.set_points(PackedVector2Array())
-
+	winLine.set_points(PackedVector2Array([startPoint, endPoint]))
+	
 	
 	
