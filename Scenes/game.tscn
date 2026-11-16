@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://c0623n3t8a5dw" path="res://Scenes/o_label.tscn" id="2_3dryh"]
 [ext_resource type="PackedScene" uid="uid://ejo2x3lfidje" path="res://Scenes/x_label.tscn" id="3_wowpa"]
 [ext_resource type="PackedScene" uid="uid://ccmhy3pk7lwbv" path="res://Scenes/win_line.tscn" id="4_wowpa"]
+[ext_resource type="PackedScene" uid="uid://lt78g2cjeula" path="res://Scenes/win_label.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://bdhdbhe72gdgi" path="res://Scenes/restart_button.tscn" id="7_1l0tm"]
 
 [node name="Game" type="Node2D" unique_id=995655573]
 script = ExtResource("1_qxrlw")
@@ -13,3 +15,14 @@ xLabelScene = ExtResource("3_wowpa")
 winLineScene = ExtResource("4_wowpa")
 
 [node name="Background" parent="." unique_id=1492675839 instance=ExtResource("1_ebmjs")]
+
+[node name="WinLabel" parent="." unique_id=1190560560 instance=ExtResource("6_i6g32")]
+offset_left = 223.0
+offset_top = 271.5
+offset_right = 377.0
+offset_bottom = 328.5
+size_flags_horizontal = 8
+
+[node name="RestartButton" parent="." unique_id=1880926985 instance=ExtResource("7_1l0tm")]
+
+[connection signal="restart" from="RestartButton" to="." method="_on_restart_button_restart"]

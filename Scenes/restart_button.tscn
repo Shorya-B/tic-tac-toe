@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdhdbhe72gdgi"]
+
+[ext_resource type="Script" uid="uid://ds3dcc2nyjru0" path="res://Scripts/restart_button.gd" id="1_jdibl"]
+
+[node name="RestartButton" type="CanvasLayer" unique_id=1880926985]
+script = ExtResource("1_jdibl")
+
+[node name="RestartButton" type="Button" parent="." unique_id=1814339412]
+texture_filter = 1
+offset_left = 246.0
+offset_top = 350.0
+offset_right = 354.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0.86362505, 0.9314006, 1.540184e-06, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "Restart"
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
